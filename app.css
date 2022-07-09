@@ -1,0 +1,21 @@
+#emojis {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  width: 350px;
+  padding: 15px;
+  background: #1e2226;
+  box-shadow: 1px 1px 10px 1px #151515; z-index: 99999999999;
+}
+
+#emojis.hidden {
+  display: none;
+}
+
+.emoji {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  margin: 5px;
+}

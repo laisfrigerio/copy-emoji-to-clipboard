@@ -1,0 +1,11 @@
+{
+  "name": "Copy Emoji to Clipboard",
+  "version": "0.1.0",
+  "description": "Easy way to copy to clipboard: just click on the desired emoji",
+  "manifest_version": 3,
+  "author": "Lais Frigério",
+  "action":{
+    "default_popup": "index.html",
+    "default_title": "Copy Emoji to Clipboard"
+  }
+}
