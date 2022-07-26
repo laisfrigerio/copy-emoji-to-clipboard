@@ -105,26 +105,31 @@ const emojis = [
   }
 ]
 
-function renderEmoji (data) {
+function emojiElement (data) {
   const { emoji, name } = data
 
   const div = document.createElement('div')
+
   div.setAttribute('class', 'emoji')
   div.setAttribute('title', name)
   div.innerText = emoji
 
   div.addEventListener('click', (emojiSelected) => {
-      navigator.clipboard.writeText(emojiSelected.target.innerText);
+    navigator.clipboard.writeText(emojiSelected.target.innerText);
   })
 
-  const element = document.querySelector('#emojis')
-  element.appendChild(div)
+  return div
 }
 
 function renderEmojis (emojis) {
+  const element = document.querySelector('#emojis')
+  const fragment = document.createDocumentFragment()
+
   for (const emoji of emojis) {
-    renderEmoji(emoji)
+    fragment.appendChild(emojiElement(emoji))
   }
+
+  element.appendChild(fragment)
 }
 
 window.addEventListener('load', () => {
